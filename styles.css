@@ -181,3 +181,56 @@ footer {
 .insta-item:hover .insta-overlay {
     opacity: 1;
 }
+
+.clickable-img {
+    cursor: zoom-in;
+    transition: opacity 0.3s;
+}
+.clickable-img:hover {
+    opacity: 0.8;
+}
+
+/* Säiliö kuvalle ja overlaylle */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Suurennuslasi-overlay */
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 134, 11, 0.5); /* Kullanhohtoinen läpikuultavuus */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.img-container:hover .zoom-overlay {
+    opacity: 1;
+}
+
+/* Instagram-ruudukon kuvat (Neliöt) */
+.insta-item .img-container {
+    aspect-ratio: 1 / 1; /* Pakottaa kuvan neliöksi */
+}
+/* Yhteiset asetukset kaikille container-kuville */
+.img-container img {
+    width: 100%;
+    height: 100%; /* Täyttää containerin korkeuden */
+    object-fit: cover; /* Rajaa kuvan nätisti, ei venytä sitä */
+    display: block;
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
+}
