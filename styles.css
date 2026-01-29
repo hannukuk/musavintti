@@ -1,0 +1,183 @@
+:root {
+    --primary-gold: #D4AF37;
+    --dark-bg: #121212;
+    --brick-red: #601010;
+    --accent-yellow: #ffcc00;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h5,
+.navbar-brand {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Navigaatio */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-bottom: 2px solid var(--primary-gold);
+}
+
+.navbar-brand {
+    color: var(--primary-gold) !important;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #fff !important;
+    margin: 0 10px;
+}
+
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: #000;
+    font-weight: bold;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-yellow);
+}
+
+.btn-outline-light {
+    border-radius: 0;
+}
+
+/* Hero-osio (PÄIVITETTY KUVA-URL) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('assets/vintti-hero-image-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 80vh;
+    /* Varmistaa korkeuden eri näytöillä */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 5px solid var(--brick-red);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    /* Responsiivinen fonttikoko */
+    font-weight: 700;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* Kortit ja osiot */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* PÄIVITETYT KORTTITYYLIT KUVILLE */
+.card-dark {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Pitää kuvan kulmat siistinä */
+    color: white;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-dark:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+    /* Kultainen hohde hoverissa */
+}
+
+.card-dark img {
+    height: 250px;
+    /* Vakiokorkeus kuville */
+    width: 100%;
+    object-fit: cover;
+    /* Rajaa kuvan nätisti vääristämättä */
+    border-bottom: 3px solid var(--primary-gold);
+}
+
+.card-body-dark {
+    padding: 2rem;
+}
+
+/* Tapahtumalelementit */
+.event-item {
+    border-left: 4px solid var(--primary-gold);
+    background: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.text-gold {
+    color: var(--primary-gold) !important;
+}
+
+/* Footer */
+footer {
+    background-color: #080808;
+    padding: 70px 0 30px;
+    border-top: 1px solid #333;
+}
+
+.social-icons i {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    color: var(--primary-gold);
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #fff;
+}
+
+/* Instagram-tyylittely */
+.insta-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    /* Tekee kuvista neliöitä */
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.insta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 134, 11, 0.6);
+    /* Kullanhohtoinen läpikuultavuus */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 2rem;
+}
+
+.insta-item:hover img {
+    transform: scale(1.1);
+}
+
+.insta-item:hover .insta-overlay {
+    opacity: 1;
+}
