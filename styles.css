@@ -5,6 +5,10 @@
     --accent-yellow: #ffcc00;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--dark-bg);
     color: #ffffff;
@@ -227,14 +231,9 @@ footer {
 
 /* Mobiililaite-hienosäätö */
 @media (max-width: 768px) {
-    /* Koska mobiilissa ei ole hoveria, voidaan overlayn 
-       opasiteettia nostaa hieman tai antaa sen näkyä klikatessa */
     .img-container:active .zoom-overlay {
         opacity: 1;
     }
-    
-    /* Jos haluat, että ikoni on aina hieman näkyvissä mobiilissa (vinkkinä käyttäjälle) */
-    /* .zoom-overlay { opacity: 0.2; } */
 }
 
 .img-container:hover .zoom-overlay {
@@ -255,4 +254,50 @@ footer {
 
 .img-container:hover img {
     transform: scale(1.05);
+}
+
+/* Taustan tummennus ja korostus */
+.bg-dark-transparent {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0 10px 10px 0;
+}
+
+#karaoke-info {
+    border-top: 2px solid var(--brick-red);
+    border-bottom: 2px solid var(--brick-red);
+}
+
+.border-gold {
+    border-color: var(--primary-gold) !important;
+}
+
+.karaoke-illustration img {
+    /* Pidetään kuva staattisena, ei zoom-efektiä */
+    transition: none;
+    display: block;
+}
+
+.karaoke-illustration {
+    /* Lisätään hienovaraista varjoa, jotta kuva nousee taustasta */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.03);
+    max-width: 500px;
+}
+
+.contact-box i {
+    width: 20px;
+    text-align: center;
+}
+
+.contact-box a:hover {
+    color: var(--primary-gold) !important;
+}
+
+/* Säiliö, joka pitää overlayn ja badgen paikoillaan */
+.stage-image-container {
+    position: relative;
+    line-height: 0; /* Poistaa pienen raon kuvan alta */
 }

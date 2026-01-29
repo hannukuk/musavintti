@@ -12,3 +12,7 @@ document.addEventListener('click', function (e) {
         }
     }
 });
+
+document.querySelectorAll('.img-container').forEach(el => {
+    el.addEventListener('touchstart', () => {}, {passive: true});
+});

@@ -20,6 +20,7 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="#"
@@ -38,19 +39,21 @@
             <li class="nav-item">
               <a class="nav-link active" href="#">Etusivu</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Karaoke</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Live-keikat</a>
+              <a class="nav-link" href="#karaoke-info">Karaoke</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Info</a></li>
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a href="#" class="btn btn-gold">VARAA PÖYTÄ</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#events">Live-keikat</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#band-info">Bändeille</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="hero-section">
       <div class="container">
         <div class="row justify-content-center">
@@ -63,16 +66,19 @@
               sellaisena kuin olet, lähde tähtenä.
             </p>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-              <button class="btn btn-gold btn-lg">KATSO TULEVAT KEIKAT</button>
-              <button class="btn btn-outline-light btn-lg">
+              <a href="#events" class="btn btn-gold btn-lg"
+                >KATSO TULEVAT KEIKAT</a
+              >
+              <a href="#karaoke-info" class="btn btn-outline-light btn-lg">
                 SELAA KARAOKELISTAA
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
 
+    <!-- KARAOKE & LIVE-KLUBI -->
     <section class="section-padding">
       <div class="container">
         <div class="row g-4">
@@ -87,7 +93,7 @@
                   loistat.
                 </p>
                 <a
-                  href="#"
+                  href="#karaoke-info"
                   class="text-gold text-decoration-none fw-bold stretched-link"
                   >LUE LISÄÄ & TULE LAULAMAAN ></a
                 >
@@ -105,9 +111,9 @@
                   kuuma tunnelma.
                 </p>
                 <a
-                  href="#"
+                  href="#events"
                   class="text-gold text-decoration-none fw-bold stretched-link"
-                  >KATSO BÄNDIHAKU & OHJELMISTO ></a
+                  >KATSO TULEVAT TAPAHTUMAT ></a
                 >
               </div>
             </div>
@@ -116,23 +122,131 @@
       </div>
     </section>
 
+    <!-- KARAOKE -->
+    <section
+      id="karaoke-info"
+      class="section-padding"
+      style="
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url(&quot;assets/brick-bg.jpg&quot;);
+        background-attachment: fixed;
+        background-size: cover;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="text-gold display-5 mb-4">
+              Vintillä lauletaan joka päivä!
+            </h2>
+            <p class="lead text-white">
+              Monipuolisesta valikoimasta löytyy varmasti jokaiselle mieluisaa
+              laulettavaa. Viikonloppuisin juhlistamme perinteisiä
+              karaokebileitä pubin puolella – myös bändi-iltoina!
+            </p>
+            <div class="mt-4 p-4 border-start border-gold bg-dark-transparent">
+              <p class="mb-0 fs-5">
+                Voit valita laulusi peräti
+                <span class="text-gold fw-bold">3 358</span> koti- ja ulkomaisen
+                kappaleen kokoelmasta.
+              </p>
+            </div>
+            <div class="mt-5">
+              <a
+                href="https://www.esongbook.net/book/861"
+                target="_blank"
+                class="btn btn-gold btn-lg px-5"
+              >
+                <i class="fas fa-list-ul me-2"></i>KATSO BIISILISTA
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div
+              class="karaoke-illustration shadow-lg rounded overflow-hidden border border-secondary"
+            >
+              <img
+                src="assets/karaoke-wide.jpg"
+                alt="Karaoketunnelmaa Musa-Vintillä"
+                class="img-fluid w-100"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- TAPAHTUMAKALENTERI -->
-    <section class="section-padding" style="background-color: #0a0a0a">
+    <section
+      id="events"
+      class="section-padding"
+      style="background-color: #0a0a0a"
+    >
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <h2 class="text-center mb-5 text-gold">Vintillä tapahtuu nyt</h2>
+            <h2 class="text-center mb-5 text-gold">
+              Vintin tulevia tapahtumia
+            </h2>
 
             <div id="events-loading-container">
               <p class="text-center">Ladataan tapahtumia...</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="text-center mt-5">
-              <button
-                class="btn btn-outline-warning px-4 py-2 rounded-0 fw-bold"
-              >
-                KATSO KOKO TAPAHTUMAKALENTERI
-              </button>
+    <!-- TIETOA BÄNDEILLE -->
+    <section
+      id="band-info"
+      class="section-padding"
+      style="background-color: #1a1a1a; border-top: 1px solid #333"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2 class="text-gold display-5 mb-4">Tulossa keikalle?</h2>
+            <p class="lead">
+              Musa-Vintti tarjoaa artisteille upean ja ison stagen sekä uusitut
+              backstagetilat. Meillä on tilaa hengittää ja loistaa.
+            </p>
+            <p class="text-light">
+              Toivotamme lämpimästi tervetulleeksi niin paikalliset tähdet kuin
+              nimekkäämmät artistit Suomen tähtitaivaalta. Uudistetulla puolella
+              on hyvin tilaa seurata keikkoja, ja tanssilattialle mahtuu
+              isollakin joukolla tamppaamaan!
+            </p>
+
+            <div class="contact-box mt-5 p-4 border border-secondary rounded">
+              <h5 class="text-gold mb-3 text-uppercase">
+                Musa-Vintin keikkabuukkaukset:
+              </h5>
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-user-tie text-gold me-3"></i>
+                <span>Päivi Salenius</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-envelope text-gold me-3"></i>
+                <a
+                  href="mailto:p.salenius@luukku.com"
+                  class="text-white text-decoration-none border-bottom border-gold"
+                  >p.salenius@luukku.com</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <div
+              class="stage-image-container rounded shadow-lg overflow-hidden"
+            >
+              <img
+                src="assets/stage-view.jpg"
+                alt="Musa-Vintin stage"
+                class="img-fluid w-100"
+              />
             </div>
           </div>
         </div>
@@ -163,7 +277,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#imageModal"
               >
-                <img src="assets/vintti-pub-1.jpg" alt="Instakuva" />
+                <img src="assets/vintti-pub-1.jpg" alt="Kuva" />
                 <div class="zoom-overlay">
                   <i class="fas fa-search"></i>
                 </div>
@@ -234,26 +348,27 @@
           <div class="col-md-4">
             <h4 class="text-gold mb-4">MUSA-VINTTI</h4>
             <p>
-              Katuosoite 123, 00100 Kaupunki<br />
-              Puh: 040-1234567<br />
-              Email: info@musavintti.fi
+              <b>Käyntiosoite:</b> Toritalo, 2. krs Kirkkotie 1<br />
+              <b>Postiosoite:</b> Keskuskuja 3 90830 Haukipudas<br />
+              <b>Puh:</b> 040 746 0407<br />
             </p>
           </div>
           <div class="col-md-4">
             <h4 class="text-gold mb-4">AUKIOLOAJAT</h4>
             <p>
-              Ke–To: 18:00 – 02:00<br />
-              Pe–La: 18:00 – 04:00<br />
-              Su–Ti: Suljettu (Yksityistilaisuudet)
+              Ma SULJETTU<br />
+              Ti - To: 18 - 00 (01)<br />
+              Pe: 18:00 - 4:00<br />
+              La: 12:00 - 4:00<br />
+              Su: 16:00 - 00 (01)
             </p>
           </div>
           <div class="col-md-4 text-md-end social-icons">
             <h4 class="text-gold mb-4">SEURAA MEITÄ</h4>
             <div class="mt-3">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-tiktok"></i></a>
-            </div>
+              <a href="https://www.facebook.com/musavintti/" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/musavintti/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
           </div>
         </div>
         <hr class="mt-5 mb-4 border-secondary opacity-25" />
